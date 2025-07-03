@@ -110,4 +110,20 @@ pip install -r requirements.txt
 python3 app.py
 ```
 
+## ⚙️ 2.1 Instalación en un túnel sobre Windows 🐧 (Para que este público en internet)
+```bash
+git clone https://github.com/cyberiuscompany/CyDoxer.git
+cd CyDoxer
+python3 -m venv venv (No es obligatorio esta comando)
+source venv/bin/activate (No es obligatorio esta comando)
+pip install -r requirements.txt
+python3 app.py
 
+# En una segunda consola lo siguiente:
+Descarga: https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-windows-amd64.exe 
+Renombralo como:  cloudflared.exe
+.\cloudflare.exe --version
+.\cloudflared.exe tunnel --url http://localhost:80
+
+Entar a: https://DOMINIO-CLOUDFLARED
+```
