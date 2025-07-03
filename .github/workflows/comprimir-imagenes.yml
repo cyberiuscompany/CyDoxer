@@ -7,20 +7,35 @@ on:
       - '**.png'
       - '**.jpg'
       - '**.jpeg'
+      - '**.webp'
+      - '**.gif'
+      - '**.svg'
 
 jobs:
   compress:
     runs-on: ubuntu-latest
+    if: github.repository_owner == 'TU-USUARIO'  # Cambia por tu usuario si quieres limitar a tu repo
+
     steps:
       - uses: actions/checkout@v3
-      - uses: calibreapp/image-actions@v1
+
+      - name: Comprimir imágenes
+        uses: calibreapp/image-actions@v1
         with:
           compress_png: true
           compress_jpg: true
-      - name: Subir cambios
+          compress_webp: true
+          compress_svg: true
+          compress_gif: true
+
+      - name: Subir cambios si los hay
         run: |
-          git config --global user.name 'github-actions'
-          git config --global user.email 'github-actions@github.com'
-          git add .
-          git commit -m "🗜 Imágenes comprimidas automáticamente" || echo "No hay cambios"
-          git push
+          git config user.name 'github-actions'
+          git config user.email 'github-actions@github.com'
+          if git diff --quiet; then
+            echo "✅ No hay imágenes nuevas que comprimir."
+          else
+            git add .
+            git commit -m "🗜 Imágenes comprimidas automáticamente"
+            git push
+          fi
