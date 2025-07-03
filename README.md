@@ -7,7 +7,7 @@
 ![Python](https://img.shields.io/badge/python-3.7%2B-yellow)
 
 # CyDoxer
-Este es la plantilla que utilizo para la creación de mis proyectos/herramientas de ciberseguridad
+Esta es una herramienta de recopilación de información personal (doxing) desarrollada en Flask. Permite investigar personas a partir de su nombre, alias, correo electrónico o dirección IP, utilizando múltiples fuentes públicas y APIs especializadas. 
 
 ---
 
@@ -19,22 +19,42 @@ Este es la plantilla que utilizo para la creación de mis proyectos/herramientas
 
 ## 🚀 Funcionalidades principales
 
-- RELLENAR.
-- RELLENAR.
-- RELLENAR.
+- 🔍 **Búsqueda por nombre real**: Permite iniciar la investigación a partir de nombres completos o parciales asociados a una persona.
+- 🕵️ **Detección de alias o nicks**: Analiza posibles pseudónimos utilizados en redes sociales, foros, leaks o plataformas públicas.
+- 📧 **Análisis de correos electrónicos**: Consulta filtraciones conocidas, registros en servicios online y perfiles vinculados.
+- 🌐 **Investigación por dirección IP**: Muestra detalles geográficos, proveedores, historial conocido y posibles actividades relacionadas con una IP.
 
+
+## 📡 Integración con APIs externas
+
+- Leaks de correos electrónicos
+- Detección de perfiles en redes sociales
+- Búsqueda de teléfonos y dominios asociados
+- Análisis de IPs y correos con VirusTotal
+    
 ## 🧰 Tecnologías utilizadas
 
-- RELLENAR.
-- RELLENAR.
-- RELLENAR.
+- **Python 3.11** – Lenguaje principal de la herramienta.
+- **Flask** – Framework web ligero para construir la interfaz y rutas de la aplicación.
+- **HTML5 + CSS3** – Para la estructura visual y el diseño estilizado de la interfaz.
+- **APIs externas** – Se integran mediante peticiones `requests` a:
+  - [VirusTotal](https://www.virustotal.com/)
+  - [Numverify](https://numverify.com/)
+- **JSON** – Gestión de configuración y claves API.
 
 ## 📁 Estructura del proyecto
 
 ```bash
-├── fichero.py # Función Principal
-├── fichero.js # Función Principal
-├── fichero.html # Función Principal
+├── app.py
+├── templates/
+│   └── index.html
+├── static/
+│   ├── styles.css
+│   └── fondo.webm
+├── templates/
+│   └── index.html
+├── requirements.txt
+└── README.md
 ```
 ---
 
@@ -54,30 +74,6 @@ Este es la plantilla que utilizo para la creación de mis proyectos/herramientas
 </p>
 
 ---
-
-## Fotos de Herramienta
-
-<h2 align="center">Foto 1</h2>
-<p align="center">
-  <img src="Foto1" alt="Foto 1" width="500"/>
-</p>
-
-<h2 align="center">Foto 2</h2>
-<p align="center">
-  <img src="Foto2" alt="Foto 2" width="500"/>
-</p>
-
-<h2 align="center">Foto 3</h2>
-<p align="center">
-  <img src="Foto3" alt="Foto 3" width="500"/>
-</p>
-
-
-## Descripción
-
-**NOMBRE-HERRAMIENTA** es una herramienta.....RELLENAR. 
-
-Diseñada con un enfoque de ciberseguridad para......RELLENAR.
 
 ## 📄 Documentación adicional
 
