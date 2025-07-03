@@ -1,0 +1,26 @@
+name: Comprimir imágenes
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**.png'
+      - '**.jpg'
+      - '**.jpeg'
+
+jobs:
+  compress:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: calibreapp/image-actions@v1
+        with:
+          compress_png: true
+          compress_jpg: true
+      - name: Subir cambios
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          git add .
+          git commit -m "🗜 Imágenes comprimidas automáticamente" || echo "No hay cambios"
+          git push

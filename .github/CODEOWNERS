@@ -1,0 +1,9 @@
+# CODEOWNERS
+
+# El propietario del proyecto (tu usuario GitHub)
+* @cyberiuscompany
+
+# Control total sobre los módulos comunes, windows y linux
+/modulos/comunes/* @cyberiuscompany
+/modulos/windows/* @cyberiuscompany
+/modulos/linux/* @cyberiuscompany

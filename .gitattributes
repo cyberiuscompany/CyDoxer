@@ -1,0 +1,88 @@
+# ==============================
+# 🧠 Forzar reconocimiento de lenguajes
+# ==============================
+
+*.html          linguist-language=HTML
+*.htm           linguist-language=HTML
+*.css           linguist-language=CSS
+*.js            linguist-language=JavaScript
+*.ts            linguist-language=TypeScript
+*.json          linguist-language=JSON
+*.md            linguist-language=Markdown
+*.py            linguist-language=Python
+*.sh            linguist-language=Shell
+*.bat           linguist-language=Batchfile
+*.ps1           linguist-language=PowerShell
+*.yml           linguist-language=YAML
+*.yaml          linguist-language=YAML
+
+# ==============================
+# 📁 Tratar recursos como documentación (no código)
+# ==============================
+
+*.png           linguist-documentation
+*.jpg           linguist-documentation
+*.jpeg          linguist-documentation
+*.gif           linguist-documentation
+*.svg           linguist-documentation
+*.ico           linguist-documentation
+*.mp4           linguist-documentation
+*.webm          linguist-documentation
+*.pdf           linguist-documentation
+*.zip           linguist-documentation
+
+# ==============================
+# 🧾 Tratar archivos planos como datos
+# ==============================
+
+*.csv           linguist-language=CSV
+*.txt           linguist-language=Text
+*.log           linguist-documentation
+*.db            linguist-documentation
+
+# ==============================
+# 🚀 Scripts y ejecutables (marcar como Shell o similares)
+# ==============================
+
+*.bash          linguist-language=Shell
+*.zsh           linguist-language=Shell
+*.command       linguist-language=Shell
+*.env           linguist-language=INI
+
+# ==============================
+# 🧱 Ficheros de configuración
+# ==============================
+
+.Dockerfile     linguist-language=Dockerfile
+*.conf          linguist-language=INI
+*.cfg           linguist-language=INI
+*.ini           linguist-language=INI
+*.toml          linguist-language=TOML
+*.editorconfig  linguist-language=INI
+
+# ==============================
+# 🧪 Ignorar resultados o ficheros generados
+# ==============================
+
+*.log           linguist-documentation
+logs/*          linguist-documentation
+*.pyc           linguist-generated
+__pycache__/*   linguist-generated
+*.lock          linguist-generated
+node_modules/*  linguist-generated
+
+# ==============================
+# 🔐 Seguridad (marcar como texto plano para evitar escaneos erróneos)
+# ==============================
+
+*.key           linguist-language=Text
+*.pem           linguist-language=Text
+*.crt           linguist-language=Text
+
+# ==============================
+# 📌 Forzar lenguaje por directorio
+# ==============================
+
+/frontend/*     linguist-language=JavaScript
+/backend/*      linguist-language=Python
+/scripts/*      linguist-language=Shell
