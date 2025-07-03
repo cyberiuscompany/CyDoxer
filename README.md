@@ -12,8 +12,31 @@ Este es la plantilla que utilizo para la creación de mis proyectos/herramientas
 ---
 
 <p align="center">
-  <img src="/fotos_herramienta/Foto Icono.png" width="1200" alt="Demostración de CyberiusUnzipCracker">
+  <img src="/fotos_herramienta/Foto Icono.png" width="500" alt="Demostración de CyberiusUnzipCracker">
 </p>
+
+---
+
+## 🚀 Funcionalidades principales
+
+- RELLENAR.
+- RELLENAR.
+- RELLENAR.
+
+## 🧰 Tecnologías utilizadas
+
+- RELLENAR.
+- RELLENAR.
+- RELLENAR.
+
+## 📁 Estructura del proyecto
+
+```bash
+├── fichero.py # Función Principal
+├── fichero.js # Función Principal
+├── fichero.html # Función Principal
+```
+---
 
 ## 🎥 Demostraciónes en vivo sobre como usar la herramienta
 
@@ -55,27 +78,6 @@ Este es la plantilla que utilizo para la creación de mis proyectos/herramientas
 **NOMBRE-HERRAMIENTA** es una herramienta.....RELLENAR. 
 
 Diseñada con un enfoque de ciberseguridad para......RELLENAR.
-
-## 🚀 Funcionalidades principales
-
-- RELLENAR.
-- RELLENAR.
-- RELLENAR.
-
-## 🧰 Tecnologías utilizadas
-
-- RELLENAR.
-- RELLENAR.
-- RELLENAR.
-
-## 📁 Estructura del proyecto
-
-```bash
-├── fichero.py # Función Principal
-├── fichero.js # Función Principal
-├── fichero.html # Función Principal
-```
----
 
 ## 📄 Documentación adicional
 
