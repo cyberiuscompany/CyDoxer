@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CyDoxer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <video autoplay muted loop id="videoFondo">
+    <source src="{{ url_for('static', filename='fondo.webm') }}" type="video/webm">
+  </video>
+
+  <div class="info-lateral">
+    <details>
+      <summary>Nombre</summary>
+      <p>Busca en redes sociales populares. Si encuentras coincidencias con fotos o actividad sospechosa, procede con cautela.</p>
+    </details>
+    <details>
+      <summary>Correo</summary>
+      <p>Si aparece filtrado, lo recomendable es cambiar la contraseña y activar la verificación en dos pasos, puedes revisar información de dicho correo en pentester.com, siempre y cuando haya sido filtrado.</p>
+    </details>
+    <details>
+      <summary>Teléfono</summary>
+      <p>Recuerda incluir el prefijo internacional (ej: +34 para España). Puedes saber la operadora y el tipo de línea.</p>
+    </details>
+    <details>
+      <summary>IP</summary>
+      <p>Una IP marcada como maliciosa puede estar relacionada con ciberataques. Evita conectarte a sus sistemas, y si quieres conocer sus "relaciones" revisa en virustotal.com.</p>
+    </details>
+        <details>
+      <summary>FAQ</summary>
+      <p>Si or un casual se falla la herrramienta contacta por Discord, o sino recuerda poner tu propia api en el fichero del proyecto llamado "config.js"</p>
+    </details>
+  </div>
+
+  <div class="contenedor-central">
+    <h1 class="titulo-app glitch" data-text="CyberDoxer">CyDoxer</h1>
+    <p class="subtitulo">Tu buscador ofensivo de personas</p>
+
+    <form method="post" id="formularioBusqueda">
+      <div class="selector-tabs">
+        <input type="radio" id="name" name="input_type" value="name" {% if input_type == 'name' %}checked{% endif %}>
+        <label for="name">Nombre</label>
+
+        <input type="radio" id="email" name="input_type" value="email" {% if input_type == 'email' %}checked{% endif %}>
+        <label for="email">Correo</label>
+
+        <input type="radio" id="phone" name="input_type" value="phone" {% if input_type == 'phone' %}checked{% endif %}>
+        <label for="phone">Teléfono</label>
+
+        <input type="radio" id="ip" name="input_type" value="ip" {% if input_type == 'ip' %}checked{% endif %}>
+        <label for="ip">IP</label>
+      </div>
+
+      <div class="input-busqueda">
+        <input type="text" name="value" placeholder="Introduce el valor..." required>
+        <button type="submit" class="boton-buscar">
+          <span class="icono-buscar">🔍</span>
+        </button>
+      </div>
+    </form>
+
+    <div id="barra-carga" style="display:none;">
+      <div class="barra-progreso"><div class="barra" id="barra"></div></div>
+    </div>
+
+    <div class="resultados" id="bloqueResultados">
+      {% if input_type == 'name' and results %}
+        <div class="bloque">
+          <h2>🧑 Perfiles públicos encontrados:</h2>
+          <ul>
+            {% for sitio, datos in results.items() %}
+              <li>
+                <img src="{{ datos.favicon }}" alt="favicon" width="16" height="16" style="vertical-align: middle; margin-right: 6px;">
+                <a href="{{ datos.url }}" target="_blank">{{ sitio }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+
+      {% elif input_type == 'email' and email %}
+        <div class="bloque">
+          <h2>Comprobación de correo:</h2>
+          <p><strong>¿Este correo ha sido hackeado?</strong>
+            {% if email_leaked %}
+              <span class="alerta">✅ Sí</span>
+            {% else %}
+              <span class="ok">❌ No</span>
+            {% endif %}
+          </p>
+        </div>
+
+      {% elif input_type == 'ip' and vt_info %}
+        <div class="bloque">
+          <h2>📡 Información IP:</h2>
+          <ul>
+            <li><strong>Proveedor:</strong> {{ vt_info.as_owner }}</li>
+            <li><strong>País:</strong> {{ vt_info.country }}</li>
+            <li><strong>ASN:</strong> {{ vt_info.asn }}</li>
+            <li><strong>Reputación:</strong> {{ vt_info.reputation }}</li>
+            <li><strong>Red:</strong> {{ vt_info.network }}</li>
+            <li><strong>Maliciosos:</strong> {{ vt_info.last_analysis_stats.malicious }}</li>
+            <li><strong>Último análisis:</strong> {{ vt_info.last_analysis_date | datetimeformat }}</li>
+          </ul>
+        </div>
+
+      {% elif input_type == 'phone' and phone_info %}
+        <div class="bloque">
+          <h2>📱 Información del teléfono:</h2>
+          <ul>
+            <li><strong>Válido:</strong> {{ 'Sí' if phone_info.valid else 'No' }}</li>
+            <li><strong>Formato internacional:</strong> {{ phone_info.international_format }}</li>
+            <li><strong>País:</strong> {{ phone_info.country_name }} ({{ phone_info.country_code }})</li>
+            <li><strong>Compañía:</strong> {{ phone_info.carrier }}</li>
+            <li><strong>Tipo de línea:</strong> {{ phone_info.line_type }}</li>
+          </ul>
+        </div>
+      {% endif %}
+    </div>
+
+    {% if input_type %}
+      <div class="volver-buscar">
+        <form action="/" method="get">
+          <button type="submit" class="boton-volver">Volver a analizar</button>
+        </form>
+      </div>
+    {% endif %}
+  </div>
+
+  <!-- Footer vertical redes -->
+  <div class="footer-vertical">
+    <div class="social-item">
+      <i class="fab fa-github"></i>
+      <a href="https://github.com/cyberiuscompany" target="_blank">GitHub</a>
+    </div>
+    <div class="social-item">
+      <i class="fab fa-youtube"></i>
+      <a href="https://www.youtube.com/@CyberiusCompany" target="_blank">YouTube</a>
+    </div>
+    <div class="social-item">
+      <i class="fab fa-paypal"></i>
+      <a href="https://paypal.me/CyberiusCompany" target="_blank">PayPal</a>
+    </div>
+    <div class="social-item">
+      <i class="fab fa-discord"></i>
+      <a href="https://disboard.org/server/1299310806617292922" target="_blank">Discord</a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('formularioBusqueda').addEventListener('submit', () => {
+      document.getElementById('barra-carga').style.display = 'block';
+    });
+
+    document.getElementById('copiarResultados')?.addEventListener('click', () => {
+      const res = document.getElementById('bloqueResultados');
+      if (res) {
+        const texto = res.innerText;
+        navigator.clipboard.writeText(texto).then(() => alert('Resultados copiados.'));
+      }
+    });
+
+    document.getElementById('togglePrivado')?.addEventListener('change', function () {
+      const res = document.getElementById('bloqueResultados');
+      if (res) {
+        res.style.display = this.checked ? 'none' : 'block';
+      }
+    });
+  </script>
+</body>
+</html>
