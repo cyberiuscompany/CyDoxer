@@ -122,7 +122,7 @@ python3 app.py
 # En una segunda consola lo siguiente:
 Descarga: https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-windows-amd64.exe 
 Renombralo como:  cloudflared.exe
-.\cloudflare.exe --version
+.\cloudflared.exe --version
 .\cloudflared.exe tunnel --url http://localhost:80
 
 Entar a: https://DOMINIO-CLOUDFLARED
