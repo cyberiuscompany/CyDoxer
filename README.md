@@ -115,8 +115,8 @@ python3 app.py
 # En una primera consola lo siguiente:
 git clone https://github.com/cyberiuscompany/CyDoxer.git
 cd CyDoxer
-python3 -m venv venv (No es obligatorio esta comando)
-source venv/bin/activate (No es obligatorio esta comando)
+python3 -m venv venv (No es obligatorio este comando)
+source venv/bin/activate (No es obligatorio este comando)
 pip install -r requirements.txt
 python3 app.py
 
