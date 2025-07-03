@@ -18,15 +18,22 @@ Esplicación que hace la herramienta.
 ---
 
 <p align="center">
-  <img src="icono.png" alt="Banner" width="500"/>
-</p
+  <img src="/fotos_herramienta/Foto panel_principal.png" width="1200" alt="Demostración de CyberiusUnzipCracker">
+</p>
 
----
-
-## 🎥 Demostración
+## 🎥 Demostraciónes en vivo sobre como usar la herramienta
 
 <p align="center">
-  <img src="docs/Demo.gif" width="1200" alt="Demostración de CyberiusUnzipCracker">
+  <table border="0" cellspacing="10" cellpadding="0">
+    <tr>
+      <td><img src="/fotos_herramienta/Analizando Correo.gif" alt="Búsqueda por nombre" width="400"/></td>
+      <td><img src="/fotos_herramienta/Analizando Nombres.gif" alt="Panel principal" width="400"/></td>
+    </tr>
+    <tr>
+      <td><img src="/fotos_herramienta/Analizando Número de telefono.gif" alt="Búsqueda por IP" width="400"/></td>
+      <td><img src="/fotos_herramienta/Analizando IP.gif" alt="Leak de correo" width="400"/></td>
+    </tr>
+  </table>
 </p>
 
 ---
