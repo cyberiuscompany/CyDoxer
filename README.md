@@ -89,34 +89,23 @@ Esta es una herramienta de recopilación de información personal (doxing) desar
 ## ⚙️ 1.1 Instalación básica con clonado 🪟 Windows
 
 ```bash
-git clone..........
-cd NOMBRE-HERRAMIENTA
-python -m venv venv
-.\venv\Scripts\activate
+git clone https://github.com/cyberiuscompany/CyDoxer.git
+cd CyDoxer
+python -m venv venv (No es obligatorio esta comando)
+.\venv\Scripts\activate (No es obligatorio esta comando)
 pip install -r requirements.txt
-python NOMBRE-HERRAMIENTA
+python app.py
 ```
 
 ## ⚙️ 1.2 Instalación básica con clonado 🐧 Linux / macOS
 
 ```bash
-git clone..........
-cd NOMBRE-HERRAMIENTA
-python3 -m venv venv
-source venv/bin/activate
+git clone https://github.com/cyberiuscompany/CyDoxer.git
+cd CyDoxer
+python3 -m venv venv (No es obligatorio esta comando)
+source venv/bin/activate (No es obligatorio esta comando)
 pip install -r requirements.txt
-python3 NOMBRE-HERRAMIENTA
+python3 app.py
 ```
 
-## ⚙️ 2 Instalación como si fuese paquete profesional
-
-```bash
-git clone..........
-cd NOMBRE-HERRAMIENTA
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-pip install .
-NOMBRE-HERRAMIENTA
-```
 
