@@ -20,8 +20,8 @@ Este es la plantilla que utilizo para la creación de mis proyectos/herramientas
 <p align="center">
   <table border="0" cellspacing="10" cellpadding="0">
     <tr>
-      <td><img src="/fotos_herramienta/Analizando Correo.gif" alt="Búsqueda por nombre" width="400"/></td>
       <td><img src="/fotos_herramienta/Analizando Nombres.gif" alt="Panel principal" width="400"/></td>
+       <td><img src="/fotos_herramienta/Analizando Correo.gif" alt="Búsqueda por nombre" width="400"/></td>
     </tr>
     <tr>
       <td><img src="/fotos_herramienta/Analizando Número de telefono.gif" alt="Búsqueda por IP" width="400"/></td>
