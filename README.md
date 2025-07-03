@@ -12,7 +12,7 @@ Este es la plantilla que utilizo para la creación de mis proyectos/herramientas
 ---
 
 <p align="center">
-  <img src="/fotos_herramienta/Foto panel_principal.png" width="1200" alt="Demostración de CyberiusUnzipCracker">
+  <img src="/fotos_herramienta/Foto Icono.png" width="1200" alt="Demostración de CyberiusUnzipCracker">
 </p>
 
 ## 🎥 Demostraciónes en vivo sobre como usar la herramienta
