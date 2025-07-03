@@ -9,7 +9,6 @@
 # CyDoxer
 Este es la plantilla que utilizo para la creación de mis proyectos/herramientas de ciberseguridad
 
-Esplicación que hace la herramienta.
 ---
 
 <p align="center">
