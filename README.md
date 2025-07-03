@@ -1,7 +1,7 @@
-# Plantilla
+# CyDoxer
 Este es la plantilla que utilizo para la creación de mis proyectos/herramientas de ciberseguridad
 
-# NOMBRE-HERRAMIENTA
+# Doxer
 
 ![GitHub release downloads](https://img.shields.io/github/downloads/CyberiusCompany/Cyberius-Unzip-Cracker/latest/total)
 ![Versión](https://img.shields.io/badge/versión-1.0.0-blue)
@@ -13,8 +13,6 @@ Este es la plantilla que utilizo para la creación de mis proyectos/herramientas
 
 Esplicación que hace la herramienta.
 
-- GitHub Pages si la herramienta tiene: https://cyberiuscompany.github.io/NOMBRE-HERRAMIENTA
-- DeepWiki de la herramienta: https://deepwiki.com/RELLENAR+INDEXAR
 ---
 
 <p align="center">
