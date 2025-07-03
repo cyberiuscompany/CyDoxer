@@ -7,7 +7,7 @@
 ![Python](https://img.shields.io/badge/python-3.7%2B-yellow)
 
 # CyDoxer
-Esta es una herramienta de recopilación de información personal (doxing) desarrollada en Flask. Permite investigar personas a partir de su nombre, alias, correo electrónico o dirección IP, utilizando múltiples fuentes públicas y APIs especializadas. 
+Esta es una herramienta de recopilación de información personal (Doxing) desarrollada en Flask. Permite investigar personas a partir de su nombre, alias, correo electrónico o dirección IP, utilizando múltiples fuentes públicas y APIs especializadas. 
 
 ---
 
