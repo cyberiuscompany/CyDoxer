@@ -23,14 +23,6 @@ Esta es una herramienta de recopilación de información personal (doxing) desar
 - 🕵️ **Detección de alias o nicks**: Analiza posibles pseudónimos utilizados en redes sociales, foros, leaks o plataformas públicas.
 - 📧 **Análisis de correos electrónicos**: Consulta filtraciones conocidas, registros en servicios online y perfiles vinculados.
 - 🌐 **Investigación por dirección IP**: Muestra detalles geográficos, proveedores, historial conocido y posibles actividades relacionadas con una IP.
-
-
-## 📡 Integración con APIs externas
-
-- Leaks de correos electrónicos
-- Detección de perfiles en redes sociales
-- Búsqueda de teléfonos y dominios asociados
-- Análisis de IPs y correos con VirusTotal
     
 ## 🧰 Tecnologías utilizadas
 
@@ -41,6 +33,13 @@ Esta es una herramienta de recopilación de información personal (doxing) desar
   - [VirusTotal](https://www.virustotal.com/)
   - [Numverify](https://numverify.com/)
 - **JSON** – Gestión de configuración y claves API.
+
+## 📡 Integración con APIs externas
+
+- Leaks de correos electrónicos
+- Detección de perfiles en redes sociales
+- Búsqueda de teléfonos y dominios asociados
+- Análisis de IPs y correos con VirusTotal
 
 ## 📁 Estructura del proyecto
 
