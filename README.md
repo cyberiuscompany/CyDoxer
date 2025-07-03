@@ -110,7 +110,7 @@ pip install -r requirements.txt
 python3 app.py
 ```
 
-## ⚙️ 2.1 Instalación en un túnel sobre Windows 🐧 (Para que este público en internet)
+## ⚙️ 2.1 Instalación en un túnel sobre Windows 🪟 (Para que este público en internet)
 ```bash
 # En una primera consola lo siguiente:
 git clone https://github.com/cyberiuscompany/CyDoxer.git
