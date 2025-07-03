@@ -3,8 +3,8 @@ import requests
 import json
 from datetime import datetime
 import webbrowser
-from flask import Flask, render_template, request
 import socket
+import os
 
 app = Flask(__name__)
 
@@ -119,16 +119,17 @@ def index():
     return render_template("index.html", results=results, vt_info=vt_info, name=name, email=email, ip=ip, phone=phone, email_leaked=email_leaked, phone_info=phone_info, input_type=input_type)
 
 if __name__ == '__main__':
-    # Obtener IP local IPv4 del equipo
+    # Obtener IP local
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     s.connect(("8.8.8.8", 80))
     local_ip = s.getsockname()[0]
     s.close()
 
-    # Mostrar IP y abrir una sola vez
-    url = f"http://{local_ip}"
-    print(f"🌐 Accede a la herramienta por IP: {url}")
-    webbrowser.open(url)
+    # Mostrar ambas IPs sólo una vez (evita duplicado por debug)
+    if os.environ.get("WERKZEUG_RUN_MAIN") == "true":
+        print("\n[+] Accede a la herramienta desde:")
+        print("   -> http://127.0.0.1:80")
+        print(f"   -> http://{local_ip}:80\n")
 
-    # Ejecutar Flask solo en esa IP
-    app.run(host=local_ip, port=80, debug=True)
+    # Ejecutar Flask en todas las interfaces
+    app.run(host='0.0.0.0', port=80, debug=True)
