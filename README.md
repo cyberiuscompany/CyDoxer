@@ -93,8 +93,8 @@ Esta es una herramienta de recopilación de información personal (Doxing) desar
 ```bash
 git clone https://github.com/cyberiuscompany/CyDoxer.git
 cd CyDoxer
-python -m venv venv (No es obligatorio esta comando)
-.\venv\Scripts\activate (No es obligatorio esta comando)
+python -m venv venv (No es obligatorio este comando)
+.\venv\Scripts\activate (No es obligatorio este comando)
 pip install -r requirements.txt
 python app.py
 ```
