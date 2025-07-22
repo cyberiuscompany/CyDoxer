@@ -134,7 +134,7 @@ python3 app.py
 git clone https://github.com/cyberiuscompany/CyDoxer.git
 cd CyDoxer
 python3 -m venv venv (Optional)
-source venv/bin/activate (Optional)
+.\venv\Scripts\activate (Optional)
 pip install -r requirements.txt
 python3 app.py
 
