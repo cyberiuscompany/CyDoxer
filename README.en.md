@@ -48,7 +48,7 @@ This is a personal information gathering tool (Doxing) developed in Flask. It al
 - **Python 3.11** – Main programming language.
 - **Flask** – Lightweight web framework for interface and routes.
 - **HTML5 + CSS3** – Visual structure and stylish interface design.
-- **External APIs** – Integrated via `requests`:
+- **External APIs** – Integrated via `requests` (Remember to add your own):
   - [VirusTotal](https://www.virustotal.com/)
   - [Numverify](https://numverify.com/)
 - **JSON** – For configuration and API key handling.
