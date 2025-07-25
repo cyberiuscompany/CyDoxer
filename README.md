@@ -45,7 +45,7 @@ Esta es una herramienta de recopilación de información personal (Doxing) desar
 - **Python 3.11** – Lenguaje principal de la herramienta.
 - **Flask** – Framework web ligero para construir la interfaz y rutas de la aplicación.
 - **HTML5 + CSS3** – Para la estructura visual y el diseño estilizado de la interfaz.
-- **APIs externas** – Se integran mediante peticiones `requests` a:
+- **APIs externas** – Se integran mediante peticiones `requests` a (Recuerda añadir las tuyas propias):
   - [VirusTotal](https://www.virustotal.com/)
   - [Numverify](https://numverify.com/)
 - **JSON** – Gestión de configuración y claves API.
